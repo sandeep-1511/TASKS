@@ -10,7 +10,7 @@ TASK-1 : Deploy hello-world-python-app using Dockerfile
   
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
-TASK-2: Create Dockerfile and Deploy php-app using Kuberneties
+TASK-2: Create Dockerfile and Deploy php-app using Kubernetes
 -------------------------------------------------------------------
 Firstly we need to clone the github repository (task-sheet) and write a docker file in that repo.
 
