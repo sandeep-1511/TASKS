@@ -1,12 +1,12 @@
 # TASKS
 TASK-1 : Deploy hello-world-python-app using Dockerfile
 ---------------------------------------------------------------
-Firstly we need to clone the github repository (task-sheet) and write a docker file in that repo.
-  Then we need to install docker . aftr installing docker check docker wheather it is installed or not.
-  After writing the Dockerfile, create an image using command "docker build -t python-image . " 
-  By using docker image create docker container using commnd "docker build -d -p 5000:5000 python-image" .
-  Now after creating docker container check the  application is accessile over web using port number.
-  Then i pushed  my image to ECR and make it available at ECR for further use.
+- Firstly we need to clone the github repository (task-sheet) and write a docker file in that repo.
+- Then we need to install docker . aftr installing docker check docker wheather it is installed or not.
+- After writing the Dockerfile, create an image using command "docker build -t python-image . " 
+- By using docker image create docker container using commnd "docker build -d -p 5000:5000 python-image" .
+- Now after creating docker container check the  application is accessile over web using port number.
+- Then i pushed  my image to ECR and make it available at ECR for further use.
   
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
