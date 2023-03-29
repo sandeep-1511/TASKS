@@ -50,7 +50,7 @@ TASK-3 : create EKS cluster using terraform
 - For the creation of EKS cluster using terraform firstly we need to install terraform in the server . 
 - firstly we need to have resources by refering terraform regiestry we get vpc,security group and eks cluster resources
 
-- in the vpc.tf file, specified provider  & resources. and modules for VPC and EKS are taken from terraform registery and modified these modules according to the need like * instance type as 't2 small' & * availability zone limited to 2 and specified subnets & count of node groups as 1 .
+- in the vpc.tf file, specified provider  & resources. and modules for VPC and EKS are taken from terraform registery and modifiy these resource according to our need like  instance type as 't2 small' & * availability zone limited to 2 and specified subnets & count of node groups as 1 .
 - variable.tf file specified if we want to create EKS cluster on other regions and it would be useful to specify variable data in the creation of infrastructure.
 - after creating all this  .tf files by using terraform validate command we can validate.
 - Then by using terraform init,terraform plan and terraform apply with this command our cluster will be created .
