@@ -42,11 +42,11 @@ eksctl version
 
 iii) Create an IAM Role and attache it to EC2 instance
 
-   IAM user should have access to
-   IAM
-   EC2
-   VPC
-   CloudFormation
+ -  IAM user should have access to
+ -  IAM
+ -  EC2
+ -  VPC
+ -  CloudFormation
    
 iv)Create your cluster and nodes
 
