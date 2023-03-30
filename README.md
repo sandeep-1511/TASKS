@@ -17,7 +17,7 @@ TASK-1 : Deploy hello-world-python-app using Dockerfile
 - 
              "docker container run  -dt -p 5000:5000 python-image" .
              
-- Now after creating docker container check the  application is accessile over web using port number.
+- Now after creating docker container check the  application is accessible over web using port number.
 - Then i pushed  my image to ECR and make it available at ECR for further use.
   
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
