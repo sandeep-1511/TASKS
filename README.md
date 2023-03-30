@@ -14,7 +14,7 @@ TASK-1 : Deploy hello-world-python-app using Dockerfile
            "docker build -t python-image . " 
            
 - By using docker image create docker container using commnd 
-- 
+ 
              "docker container run  -dt -p 5000:5000 python-image" .
              
 - Now after creating docker container check the  application is accessible over web using port number.
@@ -26,8 +26,14 @@ TASK-2: Create Dockerfile and Deploy php-app using Kubernetes
 -------------------------------------------------------------------
 Firstly we need to clone the github repository (task-sheet) and write a docker file in that repo.
 
-- After writing the Dockerfile, create an image using command "docker build -t php-image . " 
--  By using docker image create docker container using commnd "docker build -d -p 80:80 php-image" .
+- After writing the Dockerfile, create an image using command 
+    
+        "docker build -t php-image . " 
+    
+-  By using docker image create docker container using commnd.
+  
+        "docker build -d -p 80:80 php-image" .
+    
 -  Now after creating docker container check the  application is accessile over web using port number.
 - Then i pushed  my image to ECR and make it available at ECR for further use.
 Now i need to create eks cluster by using followig.
