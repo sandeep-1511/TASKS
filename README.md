@@ -89,6 +89,17 @@ TASK-3 : create EKS cluster using terraform
         terraform plan 
         terraform apply  
         
+- we need to install kubectl command .
+        
+       curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
+       chmod +x ./kubectl
+       mv ./kubectl /usr/local/bin 
+
+        
 - After creating this cluster we need to update kube/configuration file to get nodes .
- 
+        
+        aws eks update-kubeconfig --region region-code --name my-cluster
+ - Then to destroy the cluster we use 
+        
+        terraform destroy
 --------------------------------------------------------------------------------------------------------------------------------------------------------- 
