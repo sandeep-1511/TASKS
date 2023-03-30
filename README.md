@@ -36,11 +36,9 @@ i) Setup kubectl
 
 ii)Setup eksctl
 
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-
-sudo mv /tmp/eksctl /usr/local/bin
-
-eksctl version
+      curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
+      sudo mv /tmp/eksctl /usr/local/bin
+      eksctl version
 
 iii) Create an IAM Role and attache it to EC2 instance
 
