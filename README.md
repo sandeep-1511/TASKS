@@ -50,12 +50,12 @@ iii) Create an IAM Role and attache it to EC2 instance
    
 iv)Create your cluster and nodes
 
-eksctl create cluster --name cluster-name  \
---region region-name \
---node-type instance-type \
---nodes-min 2 \
---nodes-max 2 \ 
---zones <AZ-1>,<AZ-2>
+        eksctl create cluster --name cluster-name  \
+        --region region-name \
+        --node-type instance-type \
+        --nodes-min 2 \
+        --nodes-max 2 \ 
+        --zones <AZ-1>,<AZ-2>                                                                                                                                                           
            
  IT will take 15-20 mins for creation of eks cluster. after creation validate the cluster 
  
