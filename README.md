@@ -9,7 +9,7 @@ TASK-1 : Deploy hello-world-python-app using Dockerfile
            
 - By using docker image create docker container using commnd 
 - 
-             "docker build -d -p 5000:5000 python-image" .
+             "docker container run  -dt -p 5000:5000 python-image" .
              
 - Now after creating docker container check the  application is accessile over web using port number.
 - Then i pushed  my image to ECR and make it available at ECR for further use.
@@ -42,13 +42,21 @@ eksctl version
 
 iii) Create an IAM Role and attache it to EC2 instance
 
+   IAM user should have access to
+   IAM
+   EC2
+   VPC
+   CloudFormation
+   
 iv)Create your cluster and nodes
+
 eksctl create cluster --name cluster-name  \
 --region region-name \
 --node-type instance-type \
 --nodes-min 2 \
 --nodes-max 2 \ 
 --zones <AZ-1>,<AZ-2>
+           
  IT will take 15-20 mins for creation of eks cluster. after creation validate the cluster 
  
 - After this i have written deployment.yaml file as specified in the file according to kuberneties configurations and in this file i have pulled my php applicaion as an image which is previously pushed to ECR.
