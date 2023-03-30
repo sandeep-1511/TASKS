@@ -83,7 +83,12 @@ TASK-3 : create EKS cluster using terraform
 - In the vpc.tf file, specified resources  for VPC and EKS are taken from terraform registery and modifiy these resource according to our need like  instance type as 't2 small' & * availability zone limited to 2 and specified subnets & count of node groups as 1 .
 - In the eks.tf we provided every thing realted to eks cluster like iam roles .
 - after creating all this  .tf files by using terraform validate command we can validate.
-- Then by using terraform init,terraform plan and terraform apply with this command our cluster will be created .
+- Then by using terraform following commands .The cluster will be created.
+        
+        terraform init
+        terraform plan 
+        terraform apply  
+        
 - After creating this cluster we need to update kube/configuration file to get nodes .
  
 --------------------------------------------------------------------------------------------------------------------------------------------------------- 
