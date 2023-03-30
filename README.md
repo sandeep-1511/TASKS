@@ -3,8 +3,10 @@ TASK-1 : Deploy hello-world-python-app using Dockerfile
 ---------------------------------------------------------------
 - Firstly we need to clone the github repository (task-sheet) and write a docker file in that repo.
 - Then we need to install docker . aftr installing docker check docker wheather it is installed or not.
-- After writing the Dockerfile, create an image using command "docker build -t python-image . " 
-- By using docker image create docker container using commnd "docker build -d -p 5000:5000 python-image" .
+- After writing the Dockerfile, create an image using command
+           "docker build -t python-image . " 
+- By using docker image create docker container using commnd 
+             "docker build -d -p 5000:5000 python-image" .
 - Now after creating docker container check the  application is accessile over web using port number.
 - Then i pushed  my image to ECR and make it available at ECR for further use.
   
@@ -18,7 +20,9 @@ Firstly we need to clone the github repository (task-sheet) and write a docker f
 -  By using docker image create docker container using commnd "docker build -d -p 80:80 php-image" .
 -  Now after creating docker container check the  application is accessile over web using port number.
 - Then i pushed  my image to ECR and make it available at ECR for further use.
-Now i need to create eks cluster by using 
+Now i need to create eks cluster by using followig.
+
+PRE-RQUISITES:
 
 i) Setup kubectl
 
@@ -56,10 +60,10 @@ eksctl delete cluster valaxy-cluster --region ap-south-1
 TASK-3 : create EKS cluster using terraform
 --------------------------------------------
 - For the creation of EKS cluster using terraform firstly we need to install terraform in the server . 
-- firstly we need to have resources by refering terraform regiestry we get vpc,security group and eks cluster resources
+- Then we need to have resources by refering terraform regiestry we get vpc,security group and eks cluster resources.
 
-- in the vpc.tf file, specified provider  & resources. and modules for VPC and EKS are taken from terraform registery and modifiy these resource according to our need like  instance type as 't2 small' & * availability zone limited to 2 and specified subnets & count of node groups as 1 .
-- variable.tf file specified if we want to create EKS cluster on other regions and it would be useful to specify variable data in the creation of infrastructure.
+- In the vpc.tf file, specified resources  for VPC and EKS are taken from terraform registery and modifiy these resource according to our need like  instance type as 't2 small' & * availability zone limited to 2 and specified subnets & count of node groups as 1 .
+- In the eks.tf we provided every thing realted to eks cluster like iam roles .
 - after creating all this  .tf files by using terraform validate command we can validate.
 - Then by using terraform init,terraform plan and terraform apply with this command our cluster will be created .
 - After creating this cluster we need to update kube/configuration file to get nodes .
